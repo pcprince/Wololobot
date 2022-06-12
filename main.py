@@ -23,7 +23,7 @@ file_names = [
     {'names': ['9', 'oh', 'ooh', 'oooh', 'ooooh', 'oooooh'], 'file_name': 'Oooh'},
     {'names': ['10', 'ill beat you back to age of empires', 'ill beat you', 'back to age one'], 'file_name': 'Back_to_age_one'},
     {'names': ['11', 'laugh', 'herb laugh', 'haha', 'hahaha', 'hahahaha'], 'file_name': 'Herb_laugh'},
-    {'names': ['12', 'aa being rushed', 'aah being rushed', 'being rushed', 'aaah being rushed'], 'file_name': 'Being_rushed'},
+    {'names': ['12', 'aah being rushed', 'aa being rushed', 'being rushed', 'aaah being rushed'], 'file_name': 'Being_rushed'},
     {'names': ['13', 'sure blame it on your isp', 'blame it on your isp', 'blame your isp', 'isp'], 'file_name': 'Blame_your_isp'},
     {'names': ['14', 'start the game already', 'start the game'], 'file_name': 'Start_the_game'},
     {'names': ['15', 'dont point that thing at me', 'dont point that thing'], 'file_name': 'Dont_point_that_thing'},
@@ -47,13 +47,13 @@ file_names = [
     {'names': ['33', 'create extra villagers', 'create villagers'], 'file_name': 'Create_extra_villagers'},
     {'names': ['34', 'build a navy'], 'file_name': 'Build_a_navy'},
     {'names': ['35', 'stop building a navy'], 'file_name': 'Stop_building_a_navy'},
-    {'names': ['36', 'wait', 'wait for my signal to attack'], 'file_name': 'Wait_for_my_signal_to_attack'},
-    {'names': ['37', 'wonder', 'build a wonder'], 'file_name': 'Build_a_wonder'},
-    {'names': ['38', 'extra resources', 'give me your extra resources'], 'file_name': 'Give_me_your_extra_resources'},
+    {'names': ['36', 'wait for my signal to attack', 'wait'], 'file_name': 'Wait_for_my_signal_to_attack'},
+    {'names': ['37', 'build a wonder', 'wonder'], 'file_name': 'Build_a_wonder'},
+    {'names': ['38', 'give me your extra resources', 'extra resources'], 'file_name': 'Give_me_your_extra_resources'},
     {'names': ['29', 'ally'], 'file_name': 'Ally'},
     {'names': ['40', 'neutral'], 'file_name': 'Neutral'},
     {'names': ['41', 'enemy'], 'file_name': 'Enemy'},
-    {'names': ['42', 'what age', 'what age are you in'], 'file_name': 'What_age_are_you_in'}
+    {'names': ['42', 'what age are you in', 'what age'], 'file_name': 'What_age_are_you_in'}
 ]
 
 time = 0
@@ -88,6 +88,24 @@ async def on_ready():
 
 @client.command(pass_context = True)
 async def aoe (ctx, *args):
+
+    if (args[0] == 'help' or args[0] == 'list' or args[0] == 'h' or args[0] == 'l'):
+
+        print('Listing taunts')
+
+        text = 'Type `!aoe [number/taunt]` and I\'ll join your voice channel and say it.\nI allow for some variations (e.g. `What age are you in?` or `What age?`).\n'
+        text += '```'
+
+        for f in file_names:
+
+            names = f['names']
+            text += names[0] + ' - ' + names[1] + '\n'
+
+        text += '```'
+
+        await ctx.send(text)
+
+        return
 
     if (len(args) == 0) :
 
