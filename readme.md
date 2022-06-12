@@ -14,3 +14,5 @@ Then install ffmpeg:
 sudo apt install ffmpeg
 ```
 Then add bot token to api_keys.py.
+
+Finally, set the Discord bot's icon to `monk.png`. This is a very important step.
