@@ -53,7 +53,8 @@ file_names = [
     {'names': ['39', 'ally'], 'file_name': 'Ally'},
     {'names': ['40', 'neutral'], 'file_name': 'Neutral'},
     {'names': ['41', 'enemy'], 'file_name': 'Enemy'},
-    {'names': ['42', 'what age are you in', 'what age'], 'file_name': 'What_age_are_you_in'}
+    {'names': ['42', 'what age are you in', 'what age'], 'file_name': 'What_age_are_you_in'},
+    {'names': ['43', 'grunt', 'tim'], 'file_name': 'Grunt'}
 ]
 
 time = 0
