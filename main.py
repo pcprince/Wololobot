@@ -50,7 +50,7 @@ file_names = [
     {'names': ['36', 'wait for my signal to attack', 'wait'], 'file_name': 'Wait_for_my_signal_to_attack'},
     {'names': ['37', 'build a wonder', 'wonder'], 'file_name': 'Build_a_wonder'},
     {'names': ['38', 'give me your extra resources', 'extra resources'], 'file_name': 'Give_me_your_extra_resources'},
-    {'names': ['29', 'ally'], 'file_name': 'Ally'},
+    {'names': ['39', 'ally'], 'file_name': 'Ally'},
     {'names': ['40', 'neutral'], 'file_name': 'Neutral'},
     {'names': ['41', 'enemy'], 'file_name': 'Enemy'},
     {'names': ['42', 'what age are you in', 'what age'], 'file_name': 'What_age_are_you_in'}
